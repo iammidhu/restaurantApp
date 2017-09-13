@@ -1,18 +1,22 @@
-<div class="food">
-  <div class="food_icon">
+<div class="first_page">
+  <div class="food">
+    <div class="food_icon">
 
+    </div>
+    <div class="food_title">
+      Find best Restaurants near you
+      <p>
+        Order delicious food online!
+      </p>
+    </div>
   </div>
-  <div class="food_title">
-    Find best Restaurants near you
-    <p>
-      Order delicious food online!
-    </p>
-  </div>
-</div>
-<div class="searchContainer home">
-  <input type="text" class="search" ng-model="searchModel" placeholder="eg: Le arabia">
-  <input type="button" class="sButton" value="Find restaurants" ng-click="submitHome(searchModel)">
-  <div class="error">
-    {{error}}
+  <div class="searchContainer home">
+    <form method="post" name="form" novalidate>
+      <input type="text" name="searchBox" class="search" ng-model="searchModel" placeholder="eg: Le arabia" required>
+      <input type="button" class="sButton" value="Find restaurants" ng-click="submitHome(searchModel)">
+    </form>
+    <div class="error" ng-show="form.searchBox.$error.required">
+      {{error}}
+    </div>
   </div>
 </div>

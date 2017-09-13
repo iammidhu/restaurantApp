@@ -1,3 +1,67 @@
+<div class="success_heading">
+  <div class="backtoOrder">
+    <a href="/checkout">Back to order summary</a>
+  </div>
+  <div class="heading">
+    <h3>Secure Checkout</h3>
+    <p>
+      Select delivery address and payment type
+    </p>
+  </div>
+</div>
 <div class="success">
-  You have been successfully placed your order . .. That was a demo. :)
+  <div class="container1">
+    <div class="name">
+      <div class="address_title">
+        Your name and mobile number
+      </div>
+      <ul>
+        <li>
+          <div class="form_title">Your Name</div>
+          <input type="text" class="input_box" ng-model="cus_name">
+        </li>
+        <li>
+          <div class="form_title">Mobile Number</div>
+          <input type="text" class="input_box" ng-model="cus_ph_number">
+        </li>
+      </ul>
+    </div>
+    <div class="delivery_address" ng-show="showVariable">
+      <div class="address_title">Your delivery address</div>
+      <ul>
+        <li>
+          <div class="form_title">Flat No. / House No./ House name</div>
+          <input type="text" class="input_box" ng-model="address_line1">
+        </li>
+        <li>
+          <div class="form_title">Apartment / Locality name</div>
+          <input type="text" class="input_box" ng-model="address_line2">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container2">
+    <div class="payment">
+      <div class="payment_container">
+        <div class="address_title">
+          Choose how to pay
+        </div>
+        <div class="payment_type">
+          <ul>
+            <li class="types" ng-repeat="item in payment_types track by $index" ng-click="payment(item)" ng-class="{active_pay : activeItem === item}">
+              {{item}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="totalContainer">
+      <div class="total">
+        Total : {{ total }}
+      </div>
+      <div class="finishButton">
+        <button type="button" class="finish orderNow">Place order now</button>
+      </div>
+    </div>
+  </div>
 </div>

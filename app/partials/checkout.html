@@ -3,32 +3,45 @@
   <div class="backButton">
     <a href="/result">Back to resturant</a>
   </div>
-  <div class="orderSummary">
-    <h2>Your Order Summary</h2>
-    <div class="order">
+  <div class="orderBody">
+    <div class="orderSummary">
+      <h2>Your Order Summary</h2>
+      <div class="order">
+        <ul>
+          <li ng-repeat="order in info.review">
+            <div class="delete_row" ng-click="deleteRow($index)"></div>
+            <div class="orderItem">{{order.item}}</div>
+            <div class="orderCount">
+              <input type="number" ng-model="order.count" min=0 max=20 style="width: 30px;" ng-change="changeItem($index, order.count, $event)">
+            </div>
+            <div class="orderTotal">{{order.total}}</div>
+          </li>
+        </ul>
+      </div>
+      <div class="totalAmount">Total:<span class="amount">{{info.total}}</span></div>
+    </div>
+    <div class="orderInfo">
+      <div class="orderInfoHeading">Order information</div>
       <ul>
-        <li ng-repeat="order in info.review">
-          <div class="delete_row" ng-click="deleteRow($index)"></div>
-          <div class="orderItem">{{order.item}}</div>
-          <div class="orderCount">
-            <input type="number" ng-model="order.count" min=0 max=20 style="width: 30px;" ng-change="change($index, order.count, $event)">
-          </div>
-          <div class="orderTotal">{{order.total}}</div>
+        <li>
+          <input type="radio" id="delivery1" name="delivery" ng-model="delivery.name" value="delivery">
+          <label for="delivery1">Delivery</label>
+          <p>
+            Your order will be delivered to your address.
+          </p>
+        </li>
+        <li>
+          <input type="radio" id="delivery2" name="delivery" ng-model="delivery.name" value="pickup">
+          <label for="delivery2">Pickup</label>
+          <p>
+            You will pick up the order yourself at restaurant.
+          </p>
         </li>
       </ul>
-    </div>
-    <div class="totalAmount">Subtotal:<span class="amount">{{info.total}}</span></div>
-  </div>
-  <div class="payment">
-    <div class="styled-select">
-      Select your payment option :
-      <select>
-        <option>Cash on Delivery</option>
-        <option>Online pay</option>
-      </select>
+      <div class="finishButton">
+        <button type="button" class="finish" ng-click="success()" ng-disabled="isDisabled">Checkout</button>
+      </div>
     </div>
   </div>
-  <div class="finishButton">
-    <button type="button" class="finish" ng-click="success()" ng-disabled="isDisabled">Place your order</button>
-  </div>
+
 </div>

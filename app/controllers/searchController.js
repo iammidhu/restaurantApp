@@ -1,4 +1,4 @@
-myApp.controller('searchController', ['$scope', '$location', 'sharedData', 'checkoutData', function($scope, $location, sharedData, checkoutData) {
+restaurantApp.controller('searchController', ['$scope', '$location', 'sharedData', 'checkoutData', function($scope, $location, sharedData, checkoutData) {
   $scope.submitHome = function(data) {
     if(data) {
 

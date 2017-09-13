@@ -1,4 +1,4 @@
-myApp.factory('createMarker', function() {
+restaurantApp.factory('createMarker', function() {
     var createMarker = function(info, scope) {
 
         var marker = new google.maps.Marker({

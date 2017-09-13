@@ -1,4 +1,4 @@
-myApp.controller('infoController', ['$scope', '$location', 'sharedData', 'checkoutData', 'getMenuList', 'getRandomColor', function($scope, $location, sharedData, checkoutData, getMenuList, getRandomColor) {
+restaurantApp.controller('infoController', ['$scope', '$location', 'sharedData', 'checkoutData', 'getMenuList', 'getRandomColor', function($scope, $location, sharedData, checkoutData, getMenuList, getRandomColor) {
     var next = sharedData;
     var data = next.get();
     $scope.data = data;

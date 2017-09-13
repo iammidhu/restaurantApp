@@ -1,3 +1,3 @@
-myApp.controller('aboutController', function($scope){
+restaurantApp.controller('aboutController', function($scope){
 
 });

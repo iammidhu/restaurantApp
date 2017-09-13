@@ -1,4 +1,4 @@
-myApp.filter('cuisineFilter', function() {
+restaurantApp.filter('cuisineFilter', function() {
   return function(input, filterData) {
     var output = [];
     if (filterData.length == 0) {
