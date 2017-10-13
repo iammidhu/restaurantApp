@@ -1,4 +1,4 @@
-restaurantApp.factory('sharedData', function() {
+myApp.factory('sharedData', function() {
     var sharedData = {};
     var get = function() {
         return sharedData;
@@ -13,21 +13,7 @@ restaurantApp.factory('sharedData', function() {
     }
 });
 
-restaurantApp.factory('checkoutData', function() {
-    var sharedData = {};
-    var get = function() {
-        return sharedData;
-    };
-    var set = function(data) {
-        sharedData = data;
-    };
-
-    return {
-        get : get,
-        set : set
-    }
-});
-restaurantApp.factory('finalData', function() {
+myApp.factory('checkoutData', function() {
     var sharedData = {};
     var get = function() {
         return sharedData;

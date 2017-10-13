@@ -176,7 +176,6 @@ ul li {
   height: 60vh;
   padding-left: 2vh;
   background-image: url("../images/Translucent_50_percent_white.png");
-  border-top: 5px solid darkgreen;
 }
 .review ul {
   height: 200px;
@@ -292,9 +291,6 @@ ul li {
   padding: 0% 0%;
 }
 .homepage {
-  height: 77.5vh;
-}
-.first_page {
   background-image: url('../images/337094-zero.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -354,7 +350,6 @@ html, body {
 .orderSummary {
   width: 75%;
   margin-top: 25px;
-  flex-grow: 2;
 }
 .orderSummary h2 {
   font-size: 1em;
@@ -396,7 +391,7 @@ html, body {
 .totalAmount {
   width: 100%;
   text-align: right;
-  font-size: 1.3em;
+  font-size: 15px;
 }
 .totalAmount .amount {
   margin-left: 5%;
@@ -435,12 +430,20 @@ html, body {
   font-size: 14px;
 }
 .about {
-  margin: 100px;
-  font-size: 14px;
-  color: #000;
+  margin: 0;
+  margin-top: 3%;
+  text-align: center;
+  font-size: 26px;
+  color: #22264B;
 }
 .checkoutButton:disabled {
   cursor: not-allowed;
+}
+.payment {
+  padding: 5vh;
+  margin-right: 7%;
+  text-align: center;
+  font-size: 14px;
 }
 .finishButton {
   margin: 0 auto;
@@ -448,10 +451,9 @@ html, body {
 }
 .finish {
   background-color: #B56969;
-  padding: 3%;
+  padding: 1%;
   color: black;
-  width: 20vw;
-  margin-top: 20vh;
+  width: 15%;
 }
 .finish:disabled {
   cursor: not-allowed;
@@ -492,28 +494,12 @@ html, body {
 }
 .checkoutPage {
   height: 77.5vh;
-  padding-left: 12vw;
-  padding-right: 12vw;
 }
 .backButton {
   padding-left: 3vh;
   background: url('../images/arrow.png') no-repeat;
   background-size: 20px 20px;
   background-position: 0px 0px;
-}
-.backtoOrder {
-  padding: 20px;
-  background: url('../images/arrow.png') no-repeat;
-  background-size: 20px 20px;
-  background-position: 5px 20px;
-}
-.backtoOrder a {
-  text-decoration: none;
-  color: brown;
-}
-.backtoOrder a:hover {
-  color: brown;
-  text-decoration: underline;
 }
 .backButton a {
   text-decoration: none;
@@ -522,6 +508,14 @@ html, body {
 .backButton a:hover {
   color: brown;
   text-decoration: underline;
+}
+.success {
+  font-size: 17px;
+  color: cornflowerblue;
+  line-height: 20;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
 }
 .mainContainer {
   padding-left: 15vh;
@@ -550,7 +544,6 @@ html, body {
   margin: 0;
   color: #666;
 }
-
 .food {
   height: 20vh;
   padding-top: 20vh;
@@ -579,135 +572,4 @@ html, body {
 .cuisines {
   font-size: 10px;
   color: #8D9096;
-}
-.orderBody {
-  display: flex;
-  flex-direction: row;
-}
-.orderInfo {
-  width: 30%;
-  height: 65vh;
-  padding: 2vh;
-  background-image: url("../images/Translucent_50_percent_white.png");
-  border-top: 5px solid darkgreen;
-}
-.orderInfoHeading {
-  font-size: 22px;
-  line-height: 1.1;
-  font-weight: 700;
-  color: #222;
-}
-.orderInfo p {
-  font-size: 14px;
-  color: brown;
-}
-.orderInfo ul li {
-  list-style: none;
-}
-.orderInfo input[type=radio]:checked {
-  background-color: green;
-}
-
-/* success page styles*/
-
-.success {
-  width: 100%;
-  height: 67vh;
-  display: flex;
-  flex-direction: row;
-}
-.success_heading {
-  display: flex;
-  flex-direction: row;
-  padding: 1%;
-  border: 1px solid #EBC7C7;
-  border-right: 0;
-  border-left: 0;
-}
-.success_heading p {
-  font-size: 9px;
-}
-.success_heading h3 {
-  margin: 5px;
-}
-.container1 {
-  margin-left: 10px;
-  flex-grow: 1;
-  flex-wrap: wrap;
-  border-right: 1px solid #DEC1C1;
-}
-.container2 {
-  flex-grow: 1;
-  flex-wrap: wrap;
-  margin-right: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.name {
-  display: block;
-  padding: 40px;
-}
-.container1 ul li, .container2 ul li {
-  list-style: none;
-  display: block;
-  margin-bottom: 10px;
-}
-.input_box {
-  background-color: white;
-  width: 50%;
-  padding: 1%;
-  border: 1px solid #ccc;
-}
-.input_box:active {
-  outline: none;
-}
-.delivery_address {
-  display: block;
-  padding: 40px;
-}
-.payment {
-  display: flex;
-  flex-direction: row;
-  padding: 50px;
-}
-.address_title {
-  font-size: 16px;
-  color: brown;
-  margin-left: 40px;
-}
-.form_title {
-  font-size: 14px;
-}
-.payment_type {
-  display: flex;
-  flex-direction: column;
-  padding: 1%;
-}
-.payment_type .types {
-  padding: 1vh;
-  border: 1px solid #ccc;
-  margin-bottom: 5px;
-  cursor: pointer;
-}
-.totalContainer {
-  padding: 2px;
-}
-.orderNow {
-  margin: 0;
-  padding: 1.5vh;
-}
-.heading {
-  flex-grow: 2;
-}
-.payment_container {
-  width: 70%;
-}
-.total {
-  padding: 10px;
-  text-align: center;
-  background-color: #E9E7E1;
-}
-.active_pay {
-  background-color: #54DC54;
 }

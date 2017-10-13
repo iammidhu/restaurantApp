@@ -1,4 +1,4 @@
-restaurantApp.factory('getMenuList',['$http', function($http) {
+myApp.factory('getMenuList',['$http', function($http) {
 
     var config = {
         url: 'assets/json/menu.json',

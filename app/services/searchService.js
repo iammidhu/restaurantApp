@@ -1,4 +1,4 @@
-restaurantApp.factory('searchQuery', ['$http', function($http) {
+myApp.factory('searchQuery', ['$http', function($http) {
     var search = function(data) {
         var config = {
             url: 'assets/json/list.json',

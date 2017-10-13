@@ -1,4 +1,4 @@
-restaurantApp.factory('getRandomColor', function() {
+myApp.factory('getRandomColor', function() {
   var colorPicker = function() {
     var t = '0123456789ABCDEF'.split('');
     color = "#";
